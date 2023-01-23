@@ -49,11 +49,11 @@ code {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(360deg);
   }
 }
 
-.split-bckg {
+/* .split-bckg {
   background: linear-gradient(
     to right,
     #ffffff 0%,
@@ -62,7 +62,7 @@ code {
     #000000 100%
   );
   height: 95vh;
-}
+} */
 
 .split-h1 {
   display: inline-block;
@@ -70,12 +70,18 @@ code {
   line-height: 1em;
   font-family: sans-serif;
   font-weight: 300;
-  font-size: 72px;
+  font-size: 48px;
   line-height: 112%;
-  background: linear-gradient(to right, #000000 50%, #ffffff 50%);
+  background: linear-gradient(to right, #000000 50%, #FDEFBC 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+  .split-h1{
+    font-size: 72px;
+  }
 }
 
 .button-slant {
