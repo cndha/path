@@ -9,33 +9,29 @@ import raft from "./assets/raft.svg";
 import equilibria from "./assets/equilibria.svg";
 import cardinal from "./assets/cardinal.svg";
 import logoicon from "./assets/logo-icon.svg";
-import hero from "./assets/hero.svg";
 
 import Animation from "./components/Animation";
 import Button from "./components/Button";
 
 function App() {
-  // const circleInstance = useRef();
+  const circleInstance = useRef();
 
-  // useEffect(() => {
-  //   new CircleType(circleInstance.current).radius(250);
-  // }, []);
+  useEffect(() => {
+    new CircleType(circleInstance.current).radius(50);
+  }, []);
 
   return (
     <div className="mx-auto max-w-screen-2xl overflow-hidden">
-      <img src={hero} alt="" className="w-full"/>
-
-
-      <div className="h-[95%] md:relative">
-        <div className="hidden md:block z-[0] -scale-y-100 rotate-180 relative overflow-hidden h-[760px] bg-black">
-          <div className="z-[0] overflow-hidden absolute left-[40%] top-0 w-[1300px] h-[760px] rounded-tl-full round-bl-2xl bg-white" />
+      <div className="relative overflow-hidden mb-[-500px] md:mb-[-350px] lg:mb-[-200px]">
+        <div className="z-[0] -scale-y-100 rotate-180 relative overflow-hidden h-[900px] lg:h-[800px] top-[-450px] md:top-[-275px] lg:top-[-125px] bg-black">
+          <div className="z-[0] overflow-hidden absolute left-[40%] top-0 w-[1300px] h-[900px] lg:h-[800px] rounded-tl-full round-bl-2xl bg-white" />
         </div>
 
-        <div className="md:absolute top-3 left-1 md:left-8">
-          <img src={logo} alt="" className="w-1/3 md:w-full"/>
+        <div className="absolute top-3 left-1 md:left-4 lg:left-8">
+          <img src={logo} alt="" className="w-1/3 md:w-full" />
         </div>
 
-        <div className="pt-[30%] md:pt-0 md:absolute md:top-[40%] md:left-[35%] flex justify-center items-center">
+        <div className="flex justify-center absolute top-[200px] md:top-[285px] lg:top-[300px] left-[20%] min-[450px]:left-[22%] min-[475px]:left-[25%] min-[525px]:left-[26%] min-[555px]:left-[28%] min-[615px]:left-[30%] sm:left-[31%] min-[675px]:left-[33%] min-[750px]:left-[35%] md:left-[28%] min-[855px]:left-[32%] min-[980px]:left-[33%] min-[1100px]:left-[35%] min-[1200px]:left-[37%]">
           <h1 className="split-h1">
             Are we on
             <br />
@@ -43,21 +39,21 @@ function App() {
           </h1>
         </div>
 
-        <div className="flex justify-center">
-          {/* <div
+        <div className="flex justify-center overflow-hidden">
+          <div
             ref={circleInstance}
-            className="rotating-text text-[#DCB012] text-xl tracking-wider mt-20 absolute top-0"
+            className="rotating-text text-[#DCB012] text-sm md:text-lg lg:text-xl md:tracking-wider mt-20 md:mt-28 absolute top-0"
           >
             Republican • Democrat • Economy • Climate • Hunger • War • Democracy
             • Communism • God • Spirituality • Anger • Kindess • Right • Left •
-            Education • Republican • Democrat • Economy •{" "}
-          </div> */}
+            Education •
+          </div>
         </div>
       </div>
 
       <div className="px-5 md:px-10 pb-44 md:pb-64">
-        <div className="mt-44 md:mt-20">
-          <h1 className="font-light text-4xl w-3/4 md:w-full md:text-6xl text-black pb-12">
+        <div className="mt-24 md:mt-40">
+          <h1 className="font-light text-4xl w-3/4 md:w-full md:text-5xl lg:text-6xl text-black pb-12">
             If you feel the answer is no.
           </h1>
           <div className="w-4/5 ml-[10%]">
@@ -87,10 +83,10 @@ function App() {
 
         <div className="relative">
           <div className="-ml-5 md:-ml-10">
-          <Animation />
+            <Animation />
           </div>
-          <div className="w-3/4 md:w-1/2 mt-20 absolute top-[20%] left-[35%] md:top-[45%] md:left-[45%]">
-            <h1 className="font-light text-4xl md:text-6xl text-black pb-6 md:pb-12">
+          <div className="w-3/4 md:w-1/2 mt-24 absolute top-[20%] left-[35%] sm:top-[30%] lg:top-[45%] md:left-[45%]">
+            <h1 className="font-light text-4xl md:text-5xl lg:text-6xl text-black pb-6 md:pb-12">
               Some Context:
             </h1>
             <p className="text-xl md:text-2xl text-black pr-12 md:pr-0">
@@ -104,12 +100,12 @@ function App() {
           </div>
         </div>
 
-        <div className="mt-80 md:mt-40 md:ml-10 flex flex-col md:flex-row">
+        <div className="mt-80 sm:mt-56 lg:mt-40 lg:ml-10 flex flex-col lg:flex-row">
           <div>
-            <h1 className="font-light text-4xl md:text-6xl text-black pb-6 md:pb-12">
+            <h1 className="font-light text-4xl md:text-5xl lg:text-6xl text-black pb-6 md:pb-12">
               What are the problems?
             </h1>
-            <p className="text-xl md:text-2xl text-black w-full md:w-4/5">
+            <p className="text-xl md:text-2xl text-black w-full md:w-2/3 lg:w-4/5">
               After a decade of research we have identified three areas that are
               necessary to improve in order to course correct and lessen our
               collective suffering.
@@ -121,7 +117,7 @@ function App() {
           <img
             src={campfire}
             alt=""
-            className="mt-0 ml-[30%] md:ml-0 md:mt-14 w-2/3 md:w-3/4"
+            className="mt-0 ml-[30%] sm:ml-[45%] lg:ml-0 md:mt-[-50px] lg:mt-14 w-2/3 sm:w-1/2 lg:w-3/4"
           />
         </div>
 
@@ -149,8 +145,8 @@ function App() {
           <img src={sun} alt="" className="w-16 md:w-24" />
         </div>
 
-        <div className="mt-24 ml-0 md:mt-40 md:ml-10">
-          <h1 className="font-light text-4xl md:text-6xl text-black pb-6 md:pb-12">
+        <div className="mt-24 ml-0 md:mt-40 lg:ml-10">
+          <h1 className="font-light text-4xl md:text-5xl lg:text-6xl text-black pb-6 md:pb-12">
             So what are we doing?
           </h1>
           <p className="text-xl md:text-2xl text-black w-full md:w-2/3">
@@ -159,10 +155,10 @@ function App() {
           </p>
         </div>
 
-        <div className="mt-24 md:mt-40 flex flex-col justify-center gap-20 md:gap-40">
+        <div className="mt-24 md:mt-40 flex flex-col justify-center gap-20 md:gap-40 sm:px-[10%]">
           <div className="flex flex-col text-center">
             <div className="flex justify-center items-center">
-              <h1 className="font-light text-3xl md:text-5xl text-black pb-4">
+              <h1 className="font-light text-3xl md:text-4xl lg:text-5xl text-black pb-4">
                 Start With Self
               </h1>
               <img
@@ -183,14 +179,14 @@ function App() {
               <img
                 src={raft}
                 alt=""
-                className="hidden md:block absolute -top-8 right-[26%] w-[100px]"
+                className="hidden md:block absolute -top-8 md:right-[-5%] min-[875px]:right-[5%] lg:right-[10%] min-[1100px]:right-[12%] min-[1200px]:right-[16%] min-[1300px]:right-[18%] min-[1400px]:right-[22%] w-[100px]"
               />
             </div>
           </div>
 
           <div className="flex flex-col text-center">
             <div className="flex justify-center items-center">
-              <h1 className="font-light text-3xl md:text-5xl text-black pb-4">
+              <h1 className="font-light text-3xl md:text-4xl lg:text-5xl text-black pb-4">
                 Equilibria
               </h1>
               <img
@@ -210,14 +206,14 @@ function App() {
               <img
                 src={equilibria}
                 alt=""
-                className="hidden md:block absolute -top-8 right-[26%] w-[110px]"
+                className="hidden md:block absolute -top-8 md:right-[-5%] min-[875px]:right-[5%] lg:right-[10%] min-[1100px]:right-[12%] min-[1200px]:right-[16%] min-[1300px]:right-[18%] min-[1400px]:right-[22%] w-[110px]"
               />
             </div>
           </div>
 
           <div className="flex flex-col text-center">
             <div className="flex justify-center items-center">
-              <h1 className="font-light text-3xl md:text-5xl text-black pb-4">
+              <h1 className="font-light text-3xl md:text-4xl lg:text-5xl text-black pb-4">
                 Cardinal
               </h1>
               <img
@@ -236,15 +232,21 @@ function App() {
               <img
                 src={cardinal}
                 alt=""
-                className="hidden md:block absolute -top-10 right-[25%] w-[150px]"
+                className="hidden md:block absolute -top-14 lg:-top-10 md:right-[-8%] min-[875px]:right-[0%] lg:right-[8%] min-[1100px]:right-[10%] min-[1200px]:right-[12%] min-[1300px]:right-[16%] min-[1400px]:right-[20%] w-[150px]"
               />
             </div>
           </div>
 
-          <div className="flex flex-col text-center">
+          <div className="flex flex-col text-center xl:px-[18%]">
             <div className="flex justify-center items-center">
-              <h1 className="font-light text-3xl md:text-5xl text-black pb-4">PATH</h1>
-              <img src={logoicon} alt="" className="w-[44px] md:w-[50px] -mt-4 ml-4" />
+              <h1 className="font-light text-3xl md:text-4xl lg:text-5xl text-black pb-4">
+                PATH
+              </h1>
+              <img
+                src={logoicon}
+                alt=""
+                className="w-[44px] md:w-[50px] -mt-4 ml-4"
+              />
             </div>
             <p className="text-lg md:text-xl text-black">
               Organizing a community around including individuals who share this
@@ -261,7 +263,7 @@ function App() {
           <h1 className="font-light text-4xl md:text-5xl text-black flex justify-center">
             Why behave ethically if not for religion?
           </h1>
-          <div className="mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-center md:px-44 gap-20 md:gap-32">
+          <div className="mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-center lg:px-44 gap-20 md:gap-10 lg:gap-32">
             <p className="text-xl text-black">
               There has been plenty of times in history where we have not
               behaved ethically. When those times come we quickly realize that a
